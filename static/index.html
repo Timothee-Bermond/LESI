@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+      <meta charset="utf-8"/>
+      <title>LESI</title>
+
+      <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #matchList {
+            list-style-type: none;
+            padding: 0;
+        }
+        .match {
+            background-color: #f4f4f4;
+            margin: 5px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+    </style>
+
+    <link href="LESI.css" rel="stylesheet">
+  </head>
+  <body>
+      <h1>LESI</h1>
+      <button type="submit" id="login" class="bouton">Se connecter</button>
+      <button type="submit" id="logout" class="bouton">Se déconnecter</button>
+
+      <div id="mesMatchs">
+        <h1>Mes Matchs</h1>
+        <ul id="mesMatchList"></ul>
+      </div>
+
+      <div id="tousLesMatchs">
+        <h1>Calendrier</h1>
+        <ul id="tousLesMatchList"></ul>
+      </div>
+
+
+      <script src="index.js"></script>
+  </body>
+</html>

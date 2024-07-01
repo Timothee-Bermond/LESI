@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails du Match</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .character-list {
+            margin-bottom: 20px;
+        }
+        .character-list label {
+            display: block;
+        }
+    </style>
+
+    <link href="LESI.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Détails du Match</h1>
+    <div class="details">
+        <span id="team1"></span> VS <span id="team2"></span>
+    </div>
+    
+    <div id="ban">
+        <h1>BAN</h1>
+        <form id="SoloLane" class="ban-list">
+            <fieldset>
+                <legend>Solo Lane</legend>
+                <label><input type="checkbox" name="character1" id="ban-Renekton" value="Renekton"> Renekton</label>
+                <label><input type="checkbox" name="character1" id="ban-Sion" value="Sion"> Sion</label>
+                <label><input type="checkbox" name="character1" id="ban-Gragas" value="Gragas"> Gragas</label>
+                <label><input type="checkbox" name="character1" id="ban-Zed" value="Zed"> Zed</label>
+                <label><input type="checkbox" name="character1" id="ban-Jayce" value="Jayce"> Jayce</label>
+                <label><input type="checkbox" name="character1" id="ban-Veigar" value="Veigar"> Veigar</label>
+            </fieldset>
+        </form>
+        
+        <!-- List 2 -->
+        <form id="ADC" class="ban-list">
+            <fieldset>
+                <legend>ADC</legend>
+                <label><input type="checkbox" name="character2" id="ban-Aphelios" value="Aphelios"> Aphelios</label>
+                <label><input type="checkbox" name="character2" id="ban-Draven" value="Draven"> Draven</label>
+                <label><input type="checkbox" name="character2" id="ban-Caitlin" value="Caitlin"> Caitlin</label>
+                <label><input type="checkbox" name="character2" id="ban-Lucian" value="Lucian"> Lucian</label>
+                <label><input type="checkbox" name="character2" id="ban-Nilah" value="Nilah"> Nilah</label>
+            </fieldset>
+        </form>
+        
+        <!-- List 3 -->
+        <form id="Supp" class="ban-list">
+            <fieldset>
+                <legend>Support</legend>
+                <label><input type="checkbox" name="character3" id="ban-Leona" value="Leona"> Leona</label>
+                <label><input type="checkbox" name="character3" id="ban-Pyke" value="Pyke"> Pyke</label>
+                <label><input type="checkbox" name="character3" id="ban-Karma" value="Karma"> Karma</label>
+                <label><input type="checkbox" name="character3" id="ban-Taric" value="Taric"> Taric</label>
+                <label><input type="checkbox" name="character3" id="ban-Senna" value="Senna"> Senna</label>
+            </fieldset>
+        </form>
+
+        <button type="submit" id="ban_button" class="bouton">Confirmer</button>
+    </div>
+
+    <div id="pick">
+        <h1>PICK</h1>
+        <form id="SoloLane" class="pick-list">
+            <fieldset>
+                <legend>Solo Lane</legend>
+                <label><input type="checkbox" name="character1" id="pick-Renekton" value="Renekton"> Renekton</label>
+                <label><input type="checkbox" name="character1" id="pick-Sion" value="Sion"> Sion</label>
+                <label><input type="checkbox" name="character1" id="pick-Gragas" value="Gragas"> Gragas</label>
+                <label><input type="checkbox" name="character1" id="pick-Zed" value="Zed"> Zed</label>
+                <label><input type="checkbox" name="character1" id="pick-Jayce" value="Jayce"> Jayce</label>
+                <label><input type="checkbox" name="character1" id="pick-Veigar" value="Veigar"> Veigar</label>
+            </fieldset>
+        </form>
+        
+        <!-- List 2 -->
+        <form id="ADC" class="pick-list">
+            <fieldset>
+                <legend>ADC</legend>
+                <label><input type="checkbox" name="character2" id="pick-Aphelios" value="Aphelios"> Aphelios</label>
+                <label><input type="checkbox" name="character2" id="pick-Draven" value="Draven"> Draven</label>
+                <label><input type="checkbox" name="character2" id="pick-Caitlin" value="Caitlin"> Caitlin</label>
+                <label><input type="checkbox" name="character2" id="pick-Lucian" value="Lucian"> Lucian</label>
+                <label><input type="checkbox" name="character2" id="pick-Nilah" value="Nilah"> Nilah</label>
+            </fieldset>
+        </form>
+        
+        <!-- List 3 -->
+        <form id="Supp" class="pick-list">
+            <fieldset>
+                <legend>Support</legend>
+                <label><input type="checkbox" name="character3" id="pick-Leona" value="Leona"> Leona</label>
+                <label><input type="checkbox" name="character3" id="pick-Pyke" value="Pyke"> Pyke</label>
+                <label><input type="checkbox" name="character3" id="pick-Karma" value="Karma"> Karma</label>
+                <label><input type="checkbox" name="character3" id="pick-Taric" value="Taric"> Taric</label>
+                <label><input type="checkbox" name="character3" id="pick-Senna" value="Senna"> Senna</label>
+            </fieldset>
+        </form>
+
+        <button type="submit" id="pick_button" class="bouton">Confirmer</button>
+    </div>
+
+    <div id="match">
+        <h1>MATCH</h1>
+
+        <h2>BAN</h2>
+        <h3 id="team1_ban"></h3>
+        <span id="Ban1Team1"></span>
+        <span id="Ban2Team1"></span>
+
+        <h3 id="team2_ban"></h3>
+        <span id="Ban1Team2"></span>
+        <span id="Ban2Team2"></span>
+
+        <h2>PICK</h2>
+        <h3 id="team1_pick"></h3>
+        <span id="Pick1Team1"></span>
+        <span id="Pick2Team1"></span>
+        <span id="Pick3Team1"></span>
+
+        <h3 id="team2_pick"></h3>
+        <span id="Pick1Team2"></span>
+        <span id="Pick2Team2"></span>
+        <span id="Pick3Team2"></span>
+
+    </div>
+
+    <button type="submit" id="return_button" class="bouton">Retour</button>
+
+    <script src="./draft.js"></script>
+</body>
+</html>

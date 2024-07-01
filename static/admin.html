@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+  <head>
+      <meta charset="utf-8"/>
+      <title>LESI</title>
+
+      <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #matchList {
+            list-style-type: none;
+            padding: 0;
+        }
+        .match {
+            background-color: #f4f4f4;
+            margin: 5px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+    </style>
+
+    <link href="LESI.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <headear>
+      <h1>ADMIN</h1>
+
+      <button type="submit" id="logout" class="bouton">Se déconnecter</button>
+
+      <div id="tousLesMatchs">
+        <h1>Calendrier</h1>
+        <ul id="tousLesMatchList"></ul>
+      </div>
+
+      <button type="submit" id="createMatch" class="bouton">Ajouter un match</button>
+
+      <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close-button">&times;</span>
+            <h2>Créer un Match</h2>
+            <form id="createMatchForm">
+              <label for="team1">Équipe 1:</label>
+              <select id="team1" name="team1" required>
+                  <option value="" disabled selected>Choisissez l'équipe 1</option>
+                  <!-- Ajoutez des options ici -->
+              </select><br>
+              
+              <label for="team2">Équipe 2:</label>
+              <select id="team2" name="team2" required>
+                  <option value="" disabled selected>Choisissez l'équipe 2</option>
+                  <!-- Ajoutez des options ici -->
+              </select><br>
+              
+              <label for="week">Semaine:</label>
+              <input type="number" id="week" name="week" required><br>
+              
+              <button type="submit">Valider</button>
+            </form>
+        </div>
+    </div>
+
+      <script src="./admin.js"></script>
+  </body>
+</html>
